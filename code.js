@@ -43,7 +43,7 @@ function refresh(){
         alert('持有通宝数量不可大于钱盒容量')
         return
     }
-    if (opt>hod){
+    if (opt>cap){
         alert('投出数量不可大于钱盒容量')
         return
     }
