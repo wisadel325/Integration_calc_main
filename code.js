@@ -4,6 +4,14 @@ let output = document.getElementById('opt')
 let require = document.getElementById('require_num')
 let success = document.getElementById('success')
 let startbutton = document.getElementById('start')
+let selector = document.getElementById("theme_color")
+let body = document.body
+
+console.log(selector)
+selector.addEventListener('change', () => {
+    const selectedTheme = selector.value;
+    body.className = selectedTheme;
+});
 
 function refreshopt(){
     cap = Number(capacity.value)

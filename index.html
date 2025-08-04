@@ -3,36 +3,51 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <main>
-    <div class="midclass">&nbsp;</div>
-    <div class="midclass">界园肉鸽投钱计算器</div>
-    <div class="midclass">&nbsp;</div>
-    <div class="midclass">
-        <div class="leftbar">钱盒容量</div>
-        <input id = 'capacity' class = 'rightbar' value="10">
+    <body class = 'daytheme'>
 
+        <div class="midclass" style="text-align:right;">
+            <select name="color" id="theme_color" class="colorchanger" >
+                <option value="daytheme">日间色调</option>
+                <option value="nighttheme">夜间配色</option>
+                <option value="gametheme">阴间配色</option>
+            </select>
+        </div>
 
-    </div>
-    <div class="midclass">
-        <div class = 'leftbar' >持有数量</div>
-        <input id = 'hold' class = 'rightbar' value="1">
+        <div class="midclass">
+            <div class="title">界园肉鸽投钱计算器</div>
+        </div>
         
-    </div>
-    <div class="midclass">
-        <div class="leftbar">投出数量</div>
-        
-        <input id = 'opt' class = 'rightbar' value="3"></input>
+        <div class="midclass">
+            <div class="leftbar">钱盒容量</div>
+            <input id = 'capacity' class = 'rightbar' value="10">
 
-    </div>
-    <div class="midclass">
-        <div class="leftbar">需求数量</div>
-        <input  class = 'rightbar' value="1" id = 'require_num'></input>
 
-    </div>
-    <div id ="start" class="midclass" onclick="start()">点击开始计算</div>
-    <div class="midclass">
-        <div class="leftbar">成功率</div>
-        <span id = 'success' class = 'rightbar'></span>
+        </div>
+        <div class="midclass">
+            <div class = 'leftbar' >持有数量</div>
+            <input id = 'hold' class = 'rightbar' value="1">
+            
+        </div>
+        <div class="midclass">
+            <div class="leftbar">投出数量</div>
+            
+            <input id = 'opt' class = 'rightbar' value="3"></input>
 
-    </div>
+        </div>
+        <div class="midclass">
+            <div class="leftbar">需求数量</div>
+            <input  class = 'rightbar' value="1" id = 'require_num'></input>
+
+        </div>
+        <div  class="midclass" onclick="start()">
+            <div class="button" id ="start">点击开始计算</div>
+        </div>
+        <div class="midclass">
+            <div class="leftbar">成功率</div>
+            <span id = 'success' class = 'rightbar'></span>
+
+        </div>
+    </body>
+
     <script src="code.js"></script>
 </main>

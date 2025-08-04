@@ -1,6 +1,34 @@
-:gametheme{
+.gametheme{
     --text-color:#ffffff;
-    --button-color:#c66bff;
+    --input-color:#c66bff;
+    --input-hover:#4c2a5d;
+    --bg-color:#e68caa;
+    --label-color:#de4bba;
+    --button-color:#507f71;
+    --button-hover:#506464;
+}
+
+.daytheme{
+    --text-color:#000;
+    --input-color:#eee;
+    --input-hover:#ddd;
+    --bg-color:#ddd;
+    --label-color:#fff;
+    --button-color:#e6e6e6;
+    --button-hover:#ddd;
+}
+
+.nighttheme{
+    --text-color:#fff;
+    --input-color:#000;
+    --input-hover:#222;
+    --bg-color:#333;
+    --label-color:#111;
+    --button-color:#282828;
+    --button-hover:#000;
+}
+body{
+    background-color: var(--bg-color);
 }
 .test{
     color: var(--text-color)
@@ -8,6 +36,13 @@
 .midclass{
     font-size:4vh;
     text-align:center;
+    display: block;
+    width: 100%;
+    /*
+    background-color: aqua;
+    border: #000;
+    border-width: 2px;
+    margin: 5px;*/
 }
 .midclass input, 
 .midclass select {
@@ -15,20 +50,81 @@
     height:1.2em;
     
 }
-.rightbar{
+
+.leftbar,
+.rightbar,
+.title,
+.button{
     display: inline-block;
-    text-align: left;
-    font-size: 1em;
-    height:1.2em;
-    width:16vh;
-    background-color: #ddd;
     border: none;
+    font-size: 1em;
+    height: 1.2em;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin: 0.3vh;
+}
+
+.leftbar,.rightbar{
+    text-align: left;
+    width:16vh;
+    margin: 0.3vh;
+    vertical-align: middle;
+    
+}
+.rightbar{
+
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+.rightbar:hover{
+    background-color: var(--input-hover);
 }
 .leftbar{
-    display: inline-block;
+    color: var(--text-color);
+    background-color: var(--label-color);
+
+}
+
+.title{
+
+    text-align: middle;
+    background-color: var(--label-color);
+
+    color: var(--text-color);
+    padding: 0.5vh;
+
+}
+.button{
+
     text-align: left;
     font-size: 1em;
-    width:16vh;
     border: none;
 
+    color: var(--text-color);
+    background-color: var(--button-color);
+}
+.button:hover{
+    background-color: var(--button-hover);
+}
+
+.colorchanger{
+    display: inline-block;
+    border: none;
+}
+
+@media (hover: none){
+    .midclass{
+        font-size: 8vw;
+    }
+    .leftbar,
+    .rightbar{
+        width: 40vw;
+    }
+    .leftbar,
+    .rightbar,
+    .title,
+    .button{
+        margin: 1vw;
+    }
 }
